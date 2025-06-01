@@ -1,0 +1,286 @@
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #3a1836;
+    color: #fff;
+    min-height: 100vh;
+}
+header {
+    background: transparent;
+    color: #fff;
+    padding: 2.5rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    opacity: 0.85;
+    transition: opacity 0.2s, color 0.2s;
+    border-radius: 20px;
+    padding: 0.3em 1em;
+}
+nav a:hover {
+    opacity: 1;
+    background: #a259e6;
+    color: #fff;
+}
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcome, .about-full {
+    background: transparent;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 0;
+}
+.welcome h2, .about-full h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #fff;
+}
+.welcome p, .about-full p {
+    font-size: 1.2rem;
+    color: #e0d6e6;
+    margin: 0 auto 1.5rem auto;
+    max-width: 600px;
+}
+.blog-full {
+    background: transparent;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+.blog-full h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+.blog-full article {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #5e2d5a;
+}
+.blog-full article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.blog-full h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+.blog-full p {
+    color: #e0d6e6;
+    font-size: 1.08rem;
+    margin: 0;
+}
+.resume-btn, .blog-full a.button, .footer-resume-btn {
+    display: inline-block;
+    background: #a259e6;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 24px;
+    padding: 0.7em 2em;
+    font-size: 1.1rem;
+    margin: 1.2rem 0 0 0;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(162,89,230,0.10);
+}
+.resume-btn:hover, .blog-full a.button:hover, .footer-resume-btn:hover {
+    background: #fff;
+    color: #a259e6;
+}
+footer {
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem 0 1.5rem 0;
+    font-size: 1.1rem;
+    border-top: 1px solid #5e2d5a;
+    margin-top: 3rem;
+}
+footer a {
+    color: #a259e6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+footer a:hover {
+    color: #fff;
+}
+.footer-separator {
+    margin: 0 0.7em;
+    color: #a259e6;
+    font-weight: 700;
+}
+@media (max-width: 900px) {
+    header, main {
+        max-width: 98vw;
+    }
+}
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 1rem 0 1rem;
+    }
+    nav ul {
+        gap: 1.2rem;
+    }
+    main {
+        padding: 0 0.5rem 2rem 0.5rem;
+    }
+    .profile-photo {
+        max-width: 120px;
+        margin: 1.5rem auto 1rem auto;
+    }
+    .welcome h2, .about-full h2 {
+        font-size: 1.5rem;
+    }
+    .blog-full h2 {
+        font-size: 1.2rem;
+    }
+}
+.profile-photo {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 50%;
+    margin: 2.5rem auto 2rem auto;
+    box-shadow: 0 4px 24px rgba(162,89,230,0.15);
+    border: 6px solid #a259e6;
+    background: #fff;
+}
+.blog-grid-section {
+    width: 100%;
+    margin: 3rem 0;
+}
+.blog-grid-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #a259e6;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+}
+.blog-card {
+    background: #232025;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+}
+.blog-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    max-height: 140px;
+}
+.blog-tags {
+    margin-bottom: 0.7rem;
+}
+.tag {
+    display: inline-block;
+    background: #a259e6;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    padding: 0.2em 0.8em;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+.blog-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0.7rem 0;
+    color: #fff;
+}
+.blog-card p {
+    color: #e0d6e6;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+.read-more-btn {
+    align-self: flex-start;
+    background: #a259e6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1.5em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.read-more-btn:hover {
+    background: #fff;
+    color: #a259e6;
+}
+.blog-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(30, 20, 40, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+.blog-modal-content {
+    background: #232025;
+    color: #fff;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90vw;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.blog-modal-close {
+    position: absolute;
+    top: 1rem; right: 1.5rem;
+    font-size: 2rem;
+    color: #a259e6;
+    cursor: pointer;
+    font-weight: bold;
+} 
